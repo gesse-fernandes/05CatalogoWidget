@@ -31,11 +31,15 @@ class HomeWidget extends StatelessWidget {
         height: 50,
         color: Colors.red,
         alignment: Alignment.center,
-        child: Text(
+        /* child: Text(
           "Meu primeiro texto",
           textAlign: TextAlign.center,
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+        ),*/
+        child: Icon(
+          Icons.add_a_photo,
+          color: Colors.white,
         ),
       ),
     );
