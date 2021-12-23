@@ -102,12 +102,13 @@ class ButtonText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
       child: Container(
-        transform: Matrix4.identity()
+        /*transform: Matrix4.identity()
           ..scale(0.5)
-          ..translate(150.0, -100.0),
+          ..translate(150.0, -100.0),*/
+        decoration: BoxDecoration(
+            color: Colors.blue, borderRadius: BorderRadius.circular(10.0)),
         width: double.infinity,
         height: 50,
-        color: Colors.blue,
         alignment: Alignment.center,
         child: Text(
           "Toque aqui",
