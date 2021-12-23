@@ -14,7 +14,28 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: HomeWidget(),
+        body: Container(
+          color: Colors.yellow,
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              /*   Container(
+                width: double.infinity,
+                height: 50,
+                color: Colors.blue,
+              ),
+              Container(
+                width: double.infinity,
+                height: 50,
+                color: Colors.red,
+              )*/
+              ButtonIcon(),
+              ButtonText(),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -37,10 +58,45 @@ class HomeWidget extends StatelessWidget {
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
         ),*/
-        child: Icon(
+        /*child: Icon(
           Icons.add_a_photo,
           color: Colors.white,
-        ),
+        ),*/
+      ),
+    );
+  }
+}
+
+class ButtonIcon extends StatelessWidget {
+  const ButtonIcon({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 50,
+      color: Colors.red,
+      child: Icon(
+        Icons.add,
+        color: Colors.white,
+      ),
+    );
+  }
+}
+
+class ButtonText extends StatelessWidget {
+  const ButtonText({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 50,
+      color: Colors.blue,
+      alignment: Alignment.center,
+      child: Text(
+        "Toque aqui",
+        style: TextStyle(color: Colors.white, fontSize: 18),
       ),
     );
   }
