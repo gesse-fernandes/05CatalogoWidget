@@ -38,8 +38,32 @@ class MyApp extends StatelessWidget {
               /*SizedBox(
                 height: 20,
               ),*/
-
               ButtonText(),
+              ButtonTextIcon(),
+
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.cyan,
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.indigo,
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.pink,
+                  )
+                ],
+              )
             ],
           ),
         ),
@@ -98,6 +122,45 @@ class ButtonIcon extends StatelessWidget {
           color: Colors.white,
         ),
       ),
+    );
+  }
+}
+
+class ButtonTextIcon extends StatelessWidget {
+  const ButtonTextIcon({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
+      child: Container(
+          decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.circular(10.0),
+              boxShadow: <BoxShadow>[
+                BoxShadow(
+                    color: Colors.black.withOpacity(0.5),
+                    offset: Offset(3.0, 5.0),
+                    blurRadius: 7)
+              ]),
+          width: double.infinity,
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(
+                Icons.whatshot,
+                color: Colors.white,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                "Toque aqui",
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
+            ],
+          )),
     );
   }
 }
