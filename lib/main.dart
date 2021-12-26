@@ -1,3 +1,4 @@
+import 'package:catalgowidget/button-text-icon.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,15 +32,23 @@ class MyApp extends StatelessWidget {
                 height: 50,
                 color: Colors.red,
               )*/
-              ButtonIcon(),
+              //ButtonIcon(),
               //Container(
               // height: 30,
               //),
               /*SizedBox(
                 height: 20,
               ),*/
-              ButtonText(),
-              ButtonTextIcon(),
+              //ButtonText(),
+              ButtonTextIcon(
+                color: Colors.red,
+                text: "Clique Aqui",
+                iconDate: Icons.add,
+              ),
+              ButtonTextIcon(
+                  color: Colors.blue,
+                  text: "Login Facebook",
+                  iconDate: Icons.wifi),
 
               SizedBox(
                 height: 30,
@@ -97,7 +106,7 @@ class HomeWidget extends StatelessWidget {
     );
   }
 }
-
+/*
 class ButtonIcon extends StatelessWidget {
   const ButtonIcon({Key? key}) : super(key: key);
 
@@ -124,54 +133,10 @@ class ButtonIcon extends StatelessWidget {
       ),
     );
   }
-}
+}*/
 
-class ButtonTextIcon extends StatelessWidget {
-  const ButtonTextIcon({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
-      child: Container(
-          decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(10.0),
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    offset: Offset(3.0, 5.0),
-                    blurRadius: 7)
-              ]),
-          width: double.infinity,
-          height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Expanded(
-                flex: 1,
-                child: Icon(
-                  Icons.whatshot,
-                  color: Colors.white,
-                ),
-                /*child: Container(
-                  color: Colors.black,
-                ),*/
-              ),
-              Expanded(
-                flex: 3,
-                child: Text(
-                  "Toque aqui",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              ),
-            ],
-          )),
-    );
-  }
-}
-
+/*
 class ButtonText extends StatelessWidget {
   const ButtonText({Key? key}) : super(key: key);
 
@@ -202,4 +167,4 @@ class ButtonText extends StatelessWidget {
       ),
     );
   }
-}
+}*/
