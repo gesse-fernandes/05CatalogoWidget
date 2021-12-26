@@ -16,12 +16,19 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: Container(
-          color: Colors.yellow,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/background.jpeg"),
+                fit: BoxFit.cover),
+          ),
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              Image.asset(
+                "assets/images/logo.png",
+              ),
               /*   Container(
                 width: double.infinity,
                 height: 50,
