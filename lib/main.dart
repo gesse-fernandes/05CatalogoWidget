@@ -148,16 +148,23 @@ class ButtonTextIcon extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Icon(
-                Icons.whatshot,
-                color: Colors.white,
+              Expanded(
+                flex: 1,
+                child: Icon(
+                  Icons.whatshot,
+                  color: Colors.white,
+                ),
+                /*child: Container(
+                  color: Colors.black,
+                ),*/
               ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                "Toque aqui",
-                style: TextStyle(color: Colors.white, fontSize: 18),
+              Expanded(
+                flex: 3,
+                child: Text(
+                  "Toque aqui",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
               ),
             ],
           )),
